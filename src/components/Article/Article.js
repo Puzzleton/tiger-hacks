@@ -77,7 +77,8 @@ const styles = {
   headline: {
     fontSize: 32,
     fontFamily: "Didot",
-    textAlign: "center"
+    textAlign: "center",
+    padding: 10
   },
 
   image: {
@@ -92,7 +93,9 @@ const styles = {
 
   text: {
     fontFamily: "AvenirNextCondensed-Regular",
-    fontSize: 20
+    fontSize: 20,
+    textAlign: "justify",
+    padding: 10
   },
 
   spinner: {

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { View, ScrollView, Text } from 'react-native';
-import { Spinner, Container, List } from 'native-base';
+import { Spinner, Container, List, Fab, Icon } from 'native-base';
 import StyledHeader from '../Common/StyledHeader';
 import ArticleListItem from './ArticleListItem';
 import { compose, graphql } from 'react-apollo';
 import { getArticles } from './queries';
+import { createArticle } from './mutators';
 
 class ArticleList extends Component {
   getCategory = () => {
@@ -17,6 +18,17 @@ class ArticleList extends Component {
 
   onItemPress = article => {
     this.props.navigation.navigate("Article", { article: article });
+  };
+
+  onAddArticle = () => {
+    this.props.createArticle({
+      options: {
+        refetchQueries: [{ getArticles }],
+        variables: {
+          category: this.props.navigation.state.params.category
+        }
+      }
+    })
   };
 
   getArticleListItem = (article) => {
@@ -45,6 +57,8 @@ class ArticleList extends Component {
             title={this.getCategory()}
             isInModal={true}
             onDismiss={this.onDismiss}
+            icon="add"
+            onPress={this.onAddArticle}
           />
           <ScrollView>
             <List>
@@ -76,5 +90,17 @@ export default compose(
     options: ({ navigation }) => ({
       variables: { category: navigation.state.params.category }
     })
-  })
+  }),
+  graphql(createArticle, {
+    options: ({ navigation }) => ({
+      refetchQueries: [{
+        query: getArticles,
+        variables: { category: navigation.state.params.category}
+      }],
+      variables: {
+        category: navigation.state.params.category
+      }
+    }),
+     name: 'createArticle'
+   }),
 )(ArticleList);
