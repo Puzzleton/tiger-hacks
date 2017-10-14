@@ -1,4 +1,15 @@
-import { AppRegistry } from 'react-native';
-import App from './App';
+import React, { Component } from 'react';
+import { AppRegistry, View } from 'react-native';
+import Main from './src/components/Main/Main';
 
-AppRegistry.registerComponent('tigerhacks', () => App);
+class Test extends Component {
+  render() {
+    return (
+      <Main />
+    );
+  }
+}
+
+AppRegistry.registerComponent('tigerhacks', () => Test);
+
+export default Test;
