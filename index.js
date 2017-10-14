@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { AppRegistry, View } from 'react-native';
-import Main from './src/components/Main/Main';
+import App from './App';
 
 class Test extends Component {
   render() {
     return (
-      <Main />
+      <App />
     );
   }
 }

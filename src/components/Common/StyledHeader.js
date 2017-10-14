@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Left, Body, Right, Button, Icon, Header, Text } from 'native-base';
+import { Left, Body, Right, Button, Icon, Header, Title } from 'native-base';
 import { PropTypes } from 'prop-types';
 
 class StyledHeader extends Component {
@@ -24,7 +24,7 @@ class StyledHeader extends Component {
           {this.props.isInModal && this.getBack()}
         </Left>
         <Body style={styles.header}>
-          <Text style={styles.title}>{this.props.title}</Text>
+          <Title style={styles.title}>{this.props.title}</Title>
         </Body>
         <Right>
 
@@ -38,7 +38,7 @@ const styles = {
   head: {
     backgroundColor: "white",
   },
-  
+
   header: {
     flex: 1,
     flexDirection: "row",
@@ -50,7 +50,8 @@ const styles = {
 
   title: {
     fontWeight: "bold",
-    fontSize: 18
+    fontSize: 18,
+    color: "black"
   },
 
   back: {

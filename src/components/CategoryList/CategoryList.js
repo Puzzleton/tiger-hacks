@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ScrollView, View } from 'react-native';
 import { List, ListItem } from 'native-base';
-import { Left, Body, Right, Button, Icon, Header, Text } from 'native-base';
+import { Left, Body, Right, Button, Icon, Header, Title } from 'native-base';
 import CategoryListItem from './CategoryListItem';
 
 class CategoryList extends Component {
@@ -15,7 +15,7 @@ class CategoryList extends Component {
         <Header style={styles.header}>
           <Body style={styles.headerBody}>
             <Icon name='checkmark' style={styles.icon} />
-            <Text style={styles.title}>Mark-Off News</Text>
+            <Title style={styles.title}>Mark-Off News</Title>
           </Body>
         </Header>
 
@@ -71,7 +71,8 @@ const styles = {
 
   title: {
     fontWeight: "bold",
-    fontSize: 18
+    fontSize: 18,
+    color: "black"
   }
 
 };
