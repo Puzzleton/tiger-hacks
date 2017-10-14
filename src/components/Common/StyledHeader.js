@@ -36,7 +36,7 @@ class StyledHeader extends Component {
 
 const styles = {
   head: {
-    backgroundColor: "white",
+    backgroundColor: "#EEEEEE",
   },
 
   header: {
@@ -51,7 +51,8 @@ const styles = {
   title: {
     fontWeight: "bold",
     fontSize: 18,
-    color: "black"
+    color: "black",
+    fontFamily: "Didot-Bold"
   },
 
   back: {

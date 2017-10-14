@@ -33,9 +33,9 @@ class CategoryList extends Component {
               title="Technology"
               onPress={_ => this.onItemPress("Technology")}
             />
-            <CategoryListItem title="Weather" />
-            <CategoryListItem title="Media" />
-            <CategoryListItem title="Government" />
+            <CategoryListItem disabled title="Weather" />
+            <CategoryListItem disabled title="Media" />
+            <CategoryListItem disabled title="Government" />
           </List>
         </ScrollView>
       </View>
@@ -51,7 +51,7 @@ const styles = {
   },
 
   header: {
-    backgroundColor: "white"
+    backgroundColor: "#EEEEEE"
   },
 
   headerBody: {
@@ -66,13 +66,15 @@ const styles = {
   icon: {
     fontSize: 40,
     color: "red",
-    marginRight: 7
+    marginRight: 7,
+    fontWeight: "bold"
   },
 
   title: {
     fontWeight: "bold",
     fontSize: 18,
-    color: "black"
+    color: "black",
+    fontFamily: "Futura-Medium"
   }
 
 };

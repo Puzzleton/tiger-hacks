@@ -27,7 +27,8 @@ const styles = {
 
   text: {
     fontSize: 18,
-    flex: 1
+    flex: 1,
+    fontFamily: "Didot-Italic"
   },
 
   icon: {
