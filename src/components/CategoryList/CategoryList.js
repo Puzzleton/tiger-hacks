@@ -31,7 +31,7 @@ class CategoryList extends Component {
             />
             <CategoryListItem
               title="Technology"
-              onPress={_ => this.onItemPress("Technology")}
+              disabled
             />
             <CategoryListItem disabled title="Weather" />
             <CategoryListItem disabled title="Media" />
