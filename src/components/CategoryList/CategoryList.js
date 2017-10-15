@@ -29,13 +29,18 @@ class CategoryList extends Component {
               title="Sports"
               onPress={_ => this.onItemPress("Sports")}
             />
-            <CategoryListItem
-              title="Technology"
-              disabled
-            />
-            <CategoryListItem disabled title="Weather" />
-            <CategoryListItem disabled title="Media" />
-            <CategoryListItem disabled title="Government" />
+            <View style={styles.disabled}>
+              <CategoryListItem title="Technology" disabled />
+            </View>
+            <View style={styles.disabled}>
+              <CategoryListItem disabled title="Weather" />
+            </View>
+            <View style={styles.disabled}>
+              <CategoryListItem disabled title="Media" />
+            </View>
+            <View style={styles.disabled}>
+              <CategoryListItem disabled title="Government" />
+            </View>
           </List>
         </ScrollView>
       </View>
@@ -75,6 +80,10 @@ const styles = {
     fontSize: 18,
     color: "black",
     fontFamily: "Futura-Medium"
+  },
+
+  disabled: {
+    backgroundColor: "#EEEEEE"
   }
 
 };
